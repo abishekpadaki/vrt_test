@@ -4,13 +4,31 @@
   "description": "POC for VRT",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "testrun": "node puppeteer_test.js && node pixelmatch_test.js"
+    "test": "jest",
+    "testrun": "node puppeteer_test.js && node pixelmatch_test.js",
+    "update-snaps": "jest -u"
+  },
+  "jest":{
+    "preset": "jest-puppeteer"
+    
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@babel/runtime": "^7.6.3",
     "pixelmatch": "^5.1.0",
     "puppeteer": "^1.20.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.6.4",
+    "@babel/plugin-transform-runtime": "^7.6.2",
+    "@babel/preset-env": "^7.6.3",
+    "babel-core": "^6.26.3",
+    "babel-jest": "^24.9.0",
+    "babel-preset-env": "^1.7.0",
+    "jest": "^24.9.0",
+    "jest-html-reporter": "^2.6.2",
+    "jest-image-snapshot": "^2.11.0",
+    "jest-puppeteer": "^4.3.0"
   }
 }
