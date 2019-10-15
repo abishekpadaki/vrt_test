@@ -1,0 +1,16 @@
+{
+  "name": "vrt_poc",
+  "version": "1.0.0",
+  "description": "POC for VRT",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "testrun": "node puppeteer_test.js && node pixelmatch_test.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "pixelmatch": "^5.1.0",
+    "puppeteer": "^1.20.0"
+  }
+}
