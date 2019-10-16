@@ -8,9 +8,15 @@
     "testrun": "node puppeteer_test.js && node pixelmatch_test.js",
     "update-snaps": "jest -u"
   },
-  "jest":{
-    "preset": "jest-puppeteer"
-    
+  "jest": {
+    "preset": "jest-puppeteer",
+    "reporters": [
+      "default",
+      ["./node_modules/jest-html-reporter", {
+          "pageTitle": "Test Report",
+          "includeFailureMsg": true
+      }]
+  ]
   },
   "author": "",
   "license": "ISC",
